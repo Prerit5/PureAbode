@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<meta charset="UTF-8">
+	<title>Pure Abode</title>
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+      <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+      <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTkvDQ6c63uQyE39SfqqwS3ZivN-tFn-I&callback=initMap"
+  type="text/javascript"></script>
+
+  <script type="text/javascript">
+
+  		x = navigator.geolocation;
+
+  		x.getCurrentPosition(success, failure);
+
+  		function success(position)
+
+  		{
+  			var myLat = position.coords.latitude;
+  			var myLong = position.coords.longitude;
+
+  			
+  			var coords = new google.maps.LatLng(myLat,myLong);
+
+  			var mapOptions = {
+
+  				zoom:11,
+  				center: coords,
+  				mapTypeId: google.maps.MapTypeId.ROADMAP
+  			}
+
+  			var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+  			var marker = new google.maps.Marker({map:map, position:coords});	
+  		}
+
+  		function failure(){ }
+
+  </script>
+<script>
+function myFunction1() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</head>
+  <style type="text/css">
+
+  	#map {
+  			width: 400px;
+  			height: 400px;
+  	 }
+  </style>
+<style>
+
+{
+  scroll-behavior: smooth;
+	}
+	input[type="text"]{
+      border-radius:20px;
+      -moz-border-radius:20px;
+      -webkit-border-radius:20px;
+    }
+    input[type="file"]{
+      border-radius:20px;
+      -moz-border-radius:20px;
+      -webkit-border-radius:20px;
+  }
+    	input[type="radio"]{
+      border-radius:20px;
+      -moz-border-radius:20px;
+      -webkit-border-radius:20px;
+    }
+    input[type="email"]{
+      border-radius:20px;
+      -moz-border-radius:20px;
+      -webkit-border-radius:20px;
+    }
+    	input[type="tel"]{
+      border-radius:20px;
+      -moz-border-radius:20px;
+      -webkit-border-radius:20px;
+    }
+    	input[type="password"]{
+      border-radius:20px;
+      -moz-border-radius:20px;
+      -webkit-border-radius:20px;
+    }
+    	input[type="date"]{
+      border-radius:20px;
+      -moz-border-radius:20px;
+      -webkit-border-radius:20px;
+    }
+
+    button[type="submit"]{
+    border-radius:20px;
+      -moz-border-radius:20px;
+      -webkit-border-radius:20px;
+    }
+@font-face{
+	font-family: myFirstFont;
+   src: url(Helvetica.woff);
+}
+
+
+* {
+   font-family: myFirstFont;
+}
+.body{
+	margin: 0%
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #333;
+   color: white;
+   text-align: center;
+}
+	.topnav
+{
+  background-color: #333;
+  overflow:	hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:1;
+}
+ .topnav a 
+{
+  float: right;
+  color: #00BFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+  .topnav a:hover 
+{
+  background-color: #f2f2f2;
+  color: black;
+}
+  .topnav a.active 
+
+* {box-sizing: border-box;}
+
+.img-comp-container {
+  position: relative;
+
+}
+
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow:hidden;
+}
+
+.img-comp-img img {
+  display:block;
+  vertical-align: middle;
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index:9;
+  cursor: ew-resize;
+  width: 40px;
+  height: 40px;
+  background-color: #2196F3;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+.fit{
+      	max-width: 100%;
+        max-height: 100%;
+}
+</style>
+<!--register-->
+<style>
+	
+hr {
+  border:none;
+  border-top:1px dashed #00BFFF;
+  color:#fff;
+  background-color:#fff;
+  height:1px;
+  width:100%;
+}
+	body {
+		padding-top:  
+		font-family: Arial, Helvetica, sans-serif;
+		background-color: white;
+	}
+		/* Add padding to containers */
+	.container {
+		background-color: white;
+	}
+
+	
+	/* Full-width input fields */
+	input[type=text], input[type=password] {
+		width: 45%;
+		padding: 15px;
+		border: none;
+		background: #f1f1f1;
+	}
+	
+	input[type=text]:focus, input[type=password]:focus {
+		background-color: #ddd;
+		outline: none;
+	}
+	
+	/* Overwrite default styles of hr */
+
+	/* Set a style for the submit button */
+	.registerbtn {
+		background-color: #00BFFF; 
+		color: white;
+		padding: 16px 20px;
+		margin: 0%;
+		border: none;
+		cursor: pointer;
+		width: 10%;
+		opacity: 0.9;
+	}
+	
+	.registerbtn:hover {
+		opacity: 1;
+	}
+	.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 280px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+  .btn1 {
+    background-color: #3498DB;
+    color: white;
+    padding: 8px;
+    font-size: 8px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn1:hover, .btn1:focus {
+    background-color: #2980B9;
+  }
+	</style>
+<body>
+	<div class="topnav">
+	&nbsp; <img src="PURE ABODE logo white.png" width="3.5%" height="3.5%">
+			  <!--Login Form-->
+<a class="login-trigger" href="LoginPage.html" data-target="#login" data-toggle="modal">Join Us</a>
+
+	 	  	<a href="#feedback">Help Us</a>
+	 	  	<a href="#register">Complaint</a>
+			<a class="active" href="Aboutus.html">About Us</a></div><div id="home">
+				<img src="pure abode home allblack.jpg" width="100%" height="50%"> 
+	</div> 
+
+
+<br><br>
+
+
+ 	<form class="fit" action="action_page.php">
+<div class="container" id="register"><br><br><br>
+    <h1><center>Test Our Cleaning Skills!</center></h1>
+    <p><center>Please fill in this form to register a complaint.</center></p><br><br>
+		<center>
+		<input type="text" placeholder="Enter Email" name="email" required>
+		<br><br>
+		<input type="text" placeholder="Enter Full Name" name="name" required>
+		<br><br>
+		<input type="text" placeholder="Enter Contact" name="Contact" required>
+		<br><br>
+		<input type="text" placeholder="Enter Complaint Type" name="complaint type" required>
+		<br><br>
+		<input type="text" placeholder="Enter Complaint" name="Complaint" required>
+		<br><br>
+		<form action="/action_page.php"><p>Browse any media to upload it</p>
+ 		<input type="file" class="registerbtn" name="pic" accept="image/*"><br>
+ 		<input type="submit" class="registerbtn"><br>
+</form>
+		 <br><div id="map"></div><br>
+    <button type="submit" class="registerbtn">Register</button>
+	</center>
+	</div>
+</form>
+</centre> 
+
+
+<div>
+	<center><script>
+	function initComparisons() {
+	  var x, i;
+	  x = document.getElementsByClassName("img-comp-overlay");
+ 	 for (i = 0; i < x.length; i++) {
+	    compareImages(x[i]);
+	  }
+	  function compareImages(img) {
+ 	   var slider, img, clicked = 0, w, h; 
+ 	   w = img.offsetWidth;
+ 	   h = img.offsetHeight;
+ 	   img.style.width = (w / 2) + "px";
+ 	   slider = document.createElement("DIV");
+ 	   slider.setAttribute("class", "img-comp-slider");
+ 	   img.parentElement.insertBefore(slider, img);
+	    slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+	    slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+	    slider.addEventListener("mousedown", slideReady);
+ 	   window.addEventListener("mouseup", slideFinish)
+ 	   slider.addEventListener("touchstart", slideReady);
+ 	   window.addEventListener("touchstop", slideFinish);
+ 	   function slideReady(e) {
+  	    e.preventDefault();
+  	    clicked = 1;
+  	    window.addEventListener("mousemove", slideMove);
+  	    window.addEventListener("touchmove", slideMove);
+	    }
+	    function slideFinish() {
+	      clicked = 0;
+	    }
+	    function slideMove(e) {
+	      var pos;
+	      if (clicked == 0) return false;
+	      pos = getCursorPos(e)
+	      if (pos < 0) pos = 0;
+	      if (pos > w) pos = w;
+	      slide(pos);
+	    }
+	    function getCursorPos(e) {
+	      var a, x = 0;
+	      e = e || window.event;
+	      a = img.getBoundingClientRect();
+	      x = e.pageX - a.left;
+	      x = x - window.pageXOffset;
+	      return x;
+	    }
+	    function slide(x) {
+	      img.style.width = x + "px";
+	      slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+	    }
+	  }
+	}
+	</script>
+<br><br>
+
+
+
+<div>
+	<p><font size="8">C H R O N I C L E S</font></p>
+		<p><font size="6">Example for our future project.</font></p></div>
+	<div>
+	<p><font size="5">Cleanliness is most important for physical well-being and a healthy environment. It has bearing on public and personal hygiene. It is essential for everyone to learn about cleanliness, hygiene, sanitation and the various diseases that are caused due to poor hygienic conditions.</font></p><br><br>
+</div>
+
+
+<div class="img-comp-container">
+		<div class="img-comp-img">
+	    <img src="D1UFnu4WoAI4Sav.jpg" width="750" height="450" align="center">
+	</div>
+		<div class="img-comp-img img-comp-overlay">
+		<img src="D1UFnvAXgAEgFj9.jpg" width="750" height="450" align="center">
+	</div>
+
+	  
+</div>
+
+<script>
+	initComparisons();
+</script>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<form class="fit" action="action_page.php">
+<div class="container" id="feedback"><br><br><br>
+       <center>       
+        <p><font size="6">V O L U N T E E R</font></p>
+        <p>Want to join us and make a difference in the society?</p>
+        <div >
+<input type="text" placeholder="First Name" name="First Name" class="firstname form-control" required>
+<br>
+<input type="text" placeholder="Enter Last Name" class="username form-control" name="Last Name" required>
+<br>
+<input type="text" placeholder="Enter Email" class="email form-control" name="Email" required>
+<br>
+<input type="text" placeholder="Enter Contact Number" class="username form-control" name="Contact Number"required><br>
+<input type="text" placeholder="Enter DOB"class="DOB form-control" name="DOB" required>
+<br>
+<input type="text" placeholder="Enter Gender"class="Gender form-control" name="gender" required>
+<br>
+<input type="text" placeholder="Number of Members"  class="Number form-control" name="Members" required/>
+<br>
+    <button type="submit" class="registerbtn">Submit</button></div></form><br><br>
+        <form class="fit" action="action_page.php"><div class="container" id="feedback"><p>
+                <font size="6">P U R E  &nbsp; A B O D E</font><br>A platform where you can register your complaint and help us making your surrounding a better place.<br>
+                Join us at :</p>
+<a herf="index.html"><input type="text" value="pureabode.ml" id="myInput"><br><br>
+<button type="submit" onclick="myFunction1()" class="registerbtn">Copy text</button></a>
+</div></div>
+    </div></form>
+    <center>
+    <hr class="new">
+    <p><font size="6">R E W A R D S</font></p>
+<p><font size="5">Earn yourself prizes by keeping your surrounding clean.</font></p>
+<p><font size="3">Be a volunteer or report places that need to be fixed and get a chance to earn a certificate from the government.</font></p>
+<hr class="new"><br>
+<p><font size="6"> Help us get better at helping you! </font></p>
+ <a href="feedback.html"><button type="submit" class="registerbtn">Feedback</button></a>
+<br>
+
+</center><br><br><br><br><br>
+
+<div align="center" class="footer"><br>
+	<P><font size="4.5"> "Make It A Better Place For You And For Me And The Entire Human Race.  - Michael Jackson" </font></P>
+</body>
+</html>
