@@ -1,5 +1,5 @@
-1
-# PureAbode
+
+# Pure Abode
 
 Pure Abode is created by team Moriarty (Prerit Shah , Akash Shitole, Akshay Kekunnaya, Kanika Kapoor, Mihir Walia and Sayali Ambre) for Technovate's Techathon 2019.
 
